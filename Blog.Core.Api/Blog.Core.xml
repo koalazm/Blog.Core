@@ -4,83 +4,6 @@
         <name>Blog.Core.Api</name>
     </assembly>
     <members>
-        <member name="T:Blog.Core.Controllers.BlogController">
-            <summary>
-            博客管理
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.#ctor(Blog.Core.IServices.IBlogArticleServices,Microsoft.Extensions.Logging.ILogger{Blog.Core.Controllers.BlogController})">
-            <summary>
-            构造函数
-            </summary>
-            <param name="blogArticleServices"></param>
-            <param name="logger"></param>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.Get(System.Int32,System.Int32,System.String,System.String)">
-            <summary>
-            获取博客列表【无权限】
-            </summary>
-            <param name="id"></param>
-            <param name="page"></param>
-            <param name="bcategory"></param>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.Get(System.Int32)">
-            <summary>
-            获取博客详情
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.DetailNuxtNoPer(System.Int32)">
-            <summary>
-            获取详情【无权限】
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.V2_Blogtest">
-            <summary>
-            获取博客测试信息 v2版本
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.Post(Blog.Core.Model.Models.BlogArticle)">
-            <summary>
-            添加博客【无权限】
-            </summary>
-            <param name="blogArticle"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.AddForMVP(Blog.Core.Model.Models.BlogArticle)">
-            <summary>
-            
-            </summary>
-            <param name="blogArticle"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.Put(Blog.Core.Model.Models.BlogArticle)">
-            <summary>
-            更新博客信息
-            </summary>
-            <param name="BlogArticle"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.Delete(System.Int32)">
-            <summary>
-            删除博客
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.BlogController.ApacheTestUpdate">
-            <summary>
-            apache jemeter 压力测试
-            更新接口
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:Blog.Core.Controllers.DbFirstController.#ctor(SqlSugar.ISqlSugarClient,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
             <summary>
             构造函数
@@ -134,17 +57,6 @@
         <member name="M:Blog.Core.Controllers.MigrateController.SaveData2TsvAsync">
             <summary>
             权限数据库导出tsv
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Blog.Core.Controllers.HealthCheckController">
-            <summary>
-            健康检查
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Controllers.HealthCheckController.Get">
-            <summary>
-            健康检查接口
             </summary>
             <returns></returns>
         </member>
@@ -276,60 +188,6 @@
             <summary>
             SignalR send data
             </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Blog.Core.Controllers.PayController">
-            <summary>
-            建行聚合支付类
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.#ctor(Microsoft.Extensions.Logging.ILogger{Blog.Core.Controllers.PayController},Blog.Core.IServices.IPayServices)">
-            <summary>
-            构造函数
-            </summary> 
-            <param name="logger"></param>
-            <param name="payServices"></param>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayGet(Blog.Core.Model.ViewModels.PayNeedModel)">
-            <summary>
-            被扫支付
-            </summary>
-            <param name="payModel"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayPost(Blog.Core.Model.ViewModels.PayNeedModel)">
-            <summary>
-            被扫支付
-            </summary>
-            <param name="payModel"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayCheckGet(Blog.Core.Model.ViewModels.PayNeedModel)">
-            <summary>
-            支付结果查询-轮询
-            </summary>
-            <param name="payModel"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayCheckPost(Blog.Core.Model.ViewModels.PayNeedModel)">
-            <summary>
-            支付结果查询-轮询
-            </summary>
-            <param name="payModel"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayRefundGet(Blog.Core.Model.ViewModels.PayRefundNeedModel)">
-            <summary>
-            退款
-            </summary>
-            <param name="payModel"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.PayController.PayRefundPost(Blog.Core.Model.ViewModels.PayRefundNeedModel)">
-            <summary>
-            退款
-            </summary>
-            <param name="payModel"></param>
             <returns></returns>
         </member>
         <member name="T:Blog.Core.Controllers.PermissionController">
@@ -517,74 +375,6 @@
             <summary>
             获取任务命名空间
             </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Blog.Core.Controllers.TopicController">
-            <summary>
-            类别管理【无权限】
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicController.#ctor(Blog.Core.IServices.ITopicServices)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="topicServices"></param>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicController.Get">
-            <summary>
-            获取Tibug所有分类
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Blog.Core.Controllers.TopicDetailController">
-            <summary>
-            Tibug 管理
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.#ctor(Blog.Core.IServices.ITopicServices,Blog.Core.IServices.ITopicDetailServices)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="topicServices"></param>
-            <param name="topicDetailServices"></param>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.Get(System.Int32,System.String,System.String,System.Int32)">
-            <summary>
-            获取Bug数据列表（带分页）
-            【无权限】
-            </summary>
-            <param name="page">页数</param>
-            <param name="tname">专题类型</param>
-            <param name="key">关键字</param>
-            <param name="intPageSize"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.Get(System.Int32)">
-            <summary>
-            获取详情【无权限】
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.Post(Blog.Core.Model.Models.TopicDetail)">
-            <summary>
-            添加一个 BUG 【无权限】
-            </summary>
-            <param name="topicDetail"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.Update(Blog.Core.Model.Models.TopicDetail)">
-            <summary>
-            更新 bug
-            </summary>
-            <param name="topicDetail"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Controllers.TopicDetailController.Delete(System.Int32)">
-            <summary>
-            删除 bug
-            </summary>
-            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Blog.Core.Controllers.TransactionController.Delete(System.Int32)">
@@ -805,6 +595,67 @@
             Delete方法
             </summary>
             <param name="id"></param>
+        </member>
+        <member name="F:Blog.Core.Api.Controllers.ZrzyBookmarkController._bookmarkServices">
+            <summary>
+            服务器接口，因为是模板生成，所以首字母是大写的，自己可以重构下
+            </summary>
+        </member>
+        <member name="F:Blog.Core.Api.Controllers.ZrzyFileController._zrzyFileServices">
+            <summary>
+            服务器接口，因为是模板生成，所以首字母是大写的，自己可以重构下
+            </summary>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyFileController.UploadFile(Microsoft.AspNetCore.Http.IFormFile,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            上传单个文件，缓存式文件上传
+            </summary>
+            <param name="environment"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyFileController.WriteFileAsync(System.IO.Stream,System.String)">
+            <summary>
+            写文件导到磁盘
+            </summary>
+            <param name="stream">流</param>
+            <param name="path">文件保存路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyFileController.UpLoadFile2(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            上传多文件，可以使用 postman 测试，
+            如果是单文件，可以 参数写 IFormFile file1
+            </summary>
+            <param name="environment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyFileController.DownFile(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,System.String)">
+            <summary>
+            下载文件（支持中文字符）
+            </summary>
+            <param name="environment"></param>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyFileController.GetFilePath(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,System.String)">
+            <summary>
+            获取PDF文件下载路径
+            </summary>
+            <param name="environment"></param>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Blog.Core.Api.Controllers.ZrzyProjectController._zrzyProjectServices">
+            <summary>
+            服务器接口，因为是模板生成，所以首字母是大写的，自己可以重构下
+            </summary>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ZrzyProjectController.DeleteSoft(Blog.Core.Model.Models.ZrzyProject)">
+            <summary>
+            软删除
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Blog.Core.SwaggerHelper.CustomRouteAttribute">
             <summary>

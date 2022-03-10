@@ -121,7 +121,10 @@ namespace Blog.Core.Services.BASE
             return await BaseDal.DeleteByIds(ids);
         }
 
-
+        public async Task<bool> DeleteSoft(TEntity entity)
+        {
+            return await BaseDal.DeleteSoft(entity);
+        }
 
         /// <summary>
         /// 功能描述:查询所有数据

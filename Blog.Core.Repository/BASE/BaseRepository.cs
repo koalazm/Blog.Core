@@ -97,7 +97,7 @@ namespace Blog.Core.Repository.Base
             ////返回的i是long类型,这里你可以根据你的业务需要进行处理
             //return (int)i;
 
-            var insert = _db.Insertable(entity);
+                var insert = _db.Insertable(entity);
             
             //这里你可以返回TEntity，这样的话就可以获取id值，无论主键是什么类型
             //var return3 = await insert.ExecuteReturnEntityAsync();
@@ -228,6 +228,7 @@ namespace Blog.Core.Repository.Base
             return await _db.Deleteable<TEntity>(id).ExecuteCommandHasChangeAsync();
         }
 
+
         /// <summary>
         /// 删除指定ID集合的数据(批量删除)
         /// </summary>
@@ -240,7 +241,21 @@ namespace Blog.Core.Repository.Base
             return await _db.Deleteable<TEntity>().In(ids).ExecuteCommandHasChangeAsync();
         }
 
+        /// <summary>
+        /// 根据实体 软删除某一实体
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
 
+        public async Task<bool> DeleteSoft(TEntity entity)
+        {
+            List<string> lstCols = new List<string>();
+            lstCols.Add("IsDeleted");
+            lstCols.Add("DeleteBy");
+            lstCols.Add("DeleteTime");
+
+            return await Update(entity, lstCols, null);
+        }
 
         /// <summary>
         /// 功能描述:查询所有数据

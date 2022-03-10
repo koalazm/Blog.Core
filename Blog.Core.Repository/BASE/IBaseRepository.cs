@@ -64,6 +64,12 @@ namespace Blog.Core.IRepository.Base
         Task<bool> DeleteByIds(object[] ids);
 
         /// <summary>
+        /// 根据实体 软删除某一实体
+        /// </summary>
+        /// <returns></returns>
+        Task<bool> DeleteSoft(TEntity model);
+
+        /// <summary>
         /// 更新model
         /// </summary>
         /// <param name="model"></param>

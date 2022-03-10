@@ -836,6 +836,259 @@
             修改时间
             </summary>
         </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyBookmark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.BookmarkName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Description">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ExtentId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileSize">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.GuidName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ProjectName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
         <member name="P:Blog.Core.Model.RootEntity.Id">
             <summary>
             ID
@@ -1961,6 +2214,72 @@
         <member name="P:Blog.Core.Model.ViewModels.TopgbViewModels.btitle">
             <summary>博客标题
             
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.ZrzyFileViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileSize">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.GuidName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
             </summary>
         </member>
     </members>

@@ -25,6 +25,8 @@ namespace Blog.Core.IServices.BASE
 
         Task<bool> DeleteByIds(object[] ids);
 
+        Task<bool> DeleteSoft(TEntity entity);
+
         Task<bool> Update(TEntity model);
         Task<bool> Update(TEntity entity, string strWhere);
 

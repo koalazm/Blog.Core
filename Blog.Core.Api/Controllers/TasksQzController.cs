@@ -24,7 +24,6 @@ namespace Blog.Core.Controllers
         private readonly ITasksQzServices _tasksQzServices;
         private readonly ISchedulerCenter _schedulerCenter;
         private readonly IUnitOfWork _unitOfWork;
-
         public TasksQzController(ITasksQzServices tasksQzServices, ISchedulerCenter schedulerCenter, IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
