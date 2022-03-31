@@ -5,8 +5,11 @@ using Blog.Core.Model.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using System.Linq;
+using Blog.Core.AuthHelper;
 
 namespace Blog.Core.Api.Controllers
 {
@@ -19,12 +22,19 @@ namespace Blog.Core.Api.Controllers
         /// 服务器接口，因为是模板生成，所以首字母是大写的，自己可以重构下
         /// </summary>
         private readonly IZrzyProjectServices _zrzyProjectServices;
+        private readonly IZrzyProjectUserServices _zrzyProjectUserServices;
         private readonly IUser _user;
+        private readonly PermissionRequirement _requirement;
 
-        public ZrzyProjectController(IZrzyProjectServices zrzyProjectServices, IUser user)
+        public ZrzyProjectController(IZrzyProjectServices zrzyProjectServices,
+            IZrzyProjectUserServices zrzyProjectUserServices,
+            IUser user, 
+            PermissionRequirement requirement)
         {
             _zrzyProjectServices = zrzyProjectServices;
+            _zrzyProjectUserServices = zrzyProjectUserServices;
             _user = user;
+            _requirement= requirement ;
         }
 
         [HttpGet]
@@ -141,5 +151,91 @@ namespace Blog.Core.Api.Controllers
 
             return data;
         }
+
+
+        /// <summary>
+        /// 通过项目获取用户
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<int>>> GetUserIdsByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<int>>();
+
+            var pus = await _zrzyProjectUserServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var userIds = (from item in pus
+                                   select item.UserId.ObjToInt()).ToList();
+
+
+            data.success = true;
+            if (data.success)
+            {
+                data.response = userIds;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// 保存菜单权限分配
+        /// </summary>
+        /// <param name="assignView"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<MessageModel<string>> ProjectUsersAssign([FromBody] ProjectUsersView assignView)
+        {
+            var data = new MessageModel<string>();
+
+
+            if (assignView.pid > 0)
+            {
+                data.success = true;
+
+                var projectUsers = await _zrzyProjectUserServices.Query(d => d.ProjectId == assignView.pid);
+                //TODO
+                var remove = projectUsers.Where(d => !assignView.uids.Contains(d.UserId.ObjToInt())).Select(c => (object)c.Id);
+                data.success &= remove.Any() ? await _zrzyProjectUserServices.DeleteByIds(remove.ToArray()) : true;
+
+                foreach (var item in assignView.uids)
+                {
+                    var rmpitem = projectUsers.Where(d => d.UserId == item);
+                    if (!rmpitem.Any())
+                    {
+                        ZrzyProjectUser projectUser = new ZrzyProjectUser();
+                        projectUser.IsDeleted = false;
+                        projectUser.ProjectId = assignView.pid;
+                        projectUser.UserId = item;
+                        projectUser.Enabled = true;
+                        projectUser.CreateId = _user.ID;
+                        projectUser.CreateBy = _user.Name;
+                        projectUser.CreateTime = DateTime.Now;
+
+                        data.success &= (await _zrzyProjectUserServices.Add(projectUser)) > 0;
+
+                    }
+                }
+
+                if (data.success)
+                {
+                    _requirement.Permissions.Clear();
+                    data.response = "";
+                    data.msg = "保存成功";
+                }
+
+            }
+
+
+            return data;
+        }
+
+    }
+
+    public class ProjectUsersView
+    {
+        public List<int> uids { get; set; }
+        public int pid { get; set; }
     }
 }

@@ -9,40 +9,12 @@ namespace Blog.Core.Model.Models
     ///<summary>
     ///
     ///</summary>
-    [SugarTable("zrzybookmark", "server=localhost;Database=OneMapDB;Uid=root;Pwd=root;Port=3306;Allow User Variables=True;")]
-    public class ZrzyBookmark
+    [SugarTable("zrzyprojectmapserver", "server=localhost;Database=OneMapDB1;Uid=root;Pwd=root;Port=3306;Allow User Variables=True; ")]
+    public class ZrzyProjectMapServer
     {
-        public ZrzyBookmark()
+        public ZrzyProjectMapServer()
         {
         }
-
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:False
-        /// </summary>
-        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public string BookmarkName { get; set; }
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public string Description { get; set; }
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public int? ExtentId { get; set; }
         /// <summary>
         /// Desc:
         /// Default:
@@ -61,11 +33,22 @@ namespace Blog.Core.Model.Models
         /// Nullable:True
         /// </summary>
         public DateTime? CreateTime { get; set; }
-
         /// <summary>
         /// Desc:
         /// Default:
-        /// Nullable:False
+        /// Nullable:True
+        /// </summary>
+        public string DeleteBy { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:True
+        /// </summary>
+        public DateTime? DeleteTime { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:True
         /// </summary>
         public bool Enabled { get; set; }
         /// <summary>
@@ -73,9 +56,20 @@ namespace Blog.Core.Model.Models
         /// Default:
         /// Nullable:False
         /// </summary>
-        public int OrderSort { get; set; }
-
-
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+        public int Id { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:True
+        /// </summary>
+        public bool? IsDeleted { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:False
+        /// </summary>
+        public int MapServerId { get; set; }
         /// <summary>
         /// Desc:
         /// Default:
@@ -97,9 +91,8 @@ namespace Blog.Core.Model.Models
         /// <summary>
         /// Desc:
         /// Default:
-        /// Nullable:True
+        /// Nullable:False
         /// </summary>
-        public bool? IsDeleted { get; set; }
-
+        public int ProjectId { get; set; }
     }
 }

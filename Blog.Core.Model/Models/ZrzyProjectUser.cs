@@ -9,40 +9,12 @@ namespace Blog.Core.Model.Models
     ///<summary>
     ///
     ///</summary>
-    [SugarTable("zrzybookmark", "server=localhost;Database=OneMapDB;Uid=root;Pwd=root;Port=3306;Allow User Variables=True;")]
-    public class ZrzyBookmark
+    [SugarTable("zrzyprojectuser", "server=localhost;Database=OneMapDB1;Uid=root;Pwd=root;Port=3306;Allow User Variables=True; ")]
+    public class ZrzyProjectUser
     {
-        public ZrzyBookmark()
+        public ZrzyProjectUser()
         {
         }
-
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:False
-        /// </summary>
-        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public string BookmarkName { get; set; }
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public string Description { get; set; }
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>
-        public int? ExtentId { get; set; }
         /// <summary>
         /// Desc:
         /// Default:
@@ -61,20 +33,31 @@ namespace Blog.Core.Model.Models
         /// Nullable:True
         /// </summary>
         public DateTime? CreateTime { get; set; }
-
         /// <summary>
         /// Desc:
         /// Default:
-        /// Nullable:False
+        /// Nullable:True
+        /// </summary>
+        public string DeleteBy { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:True
+        /// </summary>
+        public DateTime? DeleteTime { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:True
         /// </summary>
         public bool Enabled { get; set; }
+
         /// <summary>
         /// Desc:
         /// Default:
-        /// Nullable:False
+        /// Nullable:True
         /// </summary>
-        public int OrderSort { get; set; }
-
+        public bool? IsDeleted { get; set; }
 
         /// <summary>
         /// Desc:
@@ -97,9 +80,26 @@ namespace Blog.Core.Model.Models
         /// <summary>
         /// Desc:
         /// Default:
-        /// Nullable:True
+        /// Nullable:False
         /// </summary>
-        public bool? IsDeleted { get; set; }
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+        public int Id { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:False
+        /// </summary>
+        public int UserId { get; set; }
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:False
+        /// </summary>
+        public int ProjectId { get; set; }
 
+        [SugarColumn(IsIgnore = true)]
+        public sysUserInfo User { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public ZrzyProject Project { get; set; }
     }
 }

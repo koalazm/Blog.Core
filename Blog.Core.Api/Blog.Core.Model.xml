@@ -841,7 +841,28 @@
             
             </summary>
         </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
         <member name="P:Blog.Core.Model.Models.ZrzyBookmark.BookmarkName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Description">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ExtentId">
             <summary>
             Desc:
             Default:
@@ -869,13 +890,6 @@
             Nullable:True
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Description">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
         <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Enabled">
             <summary>
             Desc:
@@ -883,25 +897,11 @@
             Nullable:False
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ExtentId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Id">
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.OrderSort">
             <summary>
             Desc:
             Default:
             Nullable:False
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.IsDeleted">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
             </summary>
         </member>
         <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyBy">
@@ -925,11 +925,11 @@
             Nullable:True
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.OrderSort">
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.IsDeleted">
             <summary>
             Desc:
             Default:
-            Nullable:False
+            Nullable:True
             </summary>
         </member>
         <member name="T:Blog.Core.Model.Models.ZrzyFile">
@@ -937,7 +937,7 @@
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.Enabled">
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Id">
             <summary>
             Desc:
             Default:
@@ -972,7 +972,7 @@
             Nullable:False
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.Id">
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Enabled">
             <summary>
             Desc:
             Default:
@@ -991,6 +991,123 @@
             Desc:
             Default:
             Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyMapServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceAlais">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
             </summary>
         </member>
         <member name="T:Blog.Core.Model.Models.ZrzyProject">
@@ -1087,6 +1204,198 @@
             Desc:
             Default:
             Nullable:True
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProjectMapServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.MapServerId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ProjectId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProjectUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.UserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ProjectId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
             </summary>
         </member>
         <member name="P:Blog.Core.Model.RootEntity.Id">

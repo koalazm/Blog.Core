@@ -41,7 +41,12 @@ namespace Blog.Core.Controllers
         /// <param name="httpContext"></param>
         /// <param name="user"></param>
         /// <param name="requirement"></param>
-        public PermissionController(IPermissionServices permissionServices, IModuleServices moduleServices, IRoleModulePermissionServices roleModulePermissionServices, IUserRoleServices userRoleServices, IHttpContextAccessor httpContext, IUser user, PermissionRequirement requirement)
+        public PermissionController(IPermissionServices permissionServices, IModuleServices moduleServices, 
+            IRoleModulePermissionServices roleModulePermissionServices, 
+            IUserRoleServices userRoleServices, 
+            IHttpContextAccessor httpContext, 
+            IUser user, 
+            PermissionRequirement requirement)
         {
             _permissionServices = permissionServices;
             _moduleServices = moduleServices;
