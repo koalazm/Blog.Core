@@ -3,7 +3,6 @@ using Blog.Core.Common.DB;
 using Blog.Core.IRepository.Base;
 using Blog.Core.IRepository.UnitOfWork;
 using Blog.Core.Model;
-using Blog.Core.Model.Models;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace Blog.Core.Repository.Base
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, new()
     {
         private readonly IUnitOfWork _unitOfWork;
-        private SqlSugarClient _dbBase;
+        private SqlSugarScope _dbBase;
 
         private ISqlSugarClient _db
         {
@@ -97,7 +96,7 @@ namespace Blog.Core.Repository.Base
             ////返回的i是long类型,这里你可以根据你的业务需要进行处理
             //return (int)i;
 
-                var insert = _db.Insertable(entity);
+            var insert = _db.Insertable(entity);
             
             //这里你可以返回TEntity，这样的话就可以获取id值，无论主键是什么类型
             //var return3 = await insert.ExecuteReturnEntityAsync();
@@ -418,7 +417,6 @@ namespace Blog.Core.Repository.Base
         /// <param name="whereExpression">条件表达式</param>
         /// <param name="intPageIndex">页码（下标0）</param>
         /// <param name="intPageSize">页大小</param>
-        /// <param name="intTotalCount">数据总量</param>
         /// <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(
@@ -438,7 +436,6 @@ namespace Blog.Core.Repository.Base
         /// <param name="strWhere">条件</param>
         /// <param name="intPageIndex">页码（下标0）</param>
         /// <param name="intPageSize">页大小</param>
-        /// <param name="intTotalCount">数据总量</param>
         /// <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(
@@ -471,8 +468,7 @@ namespace Blog.Core.Repository.Base
              .WhereIF(whereExpression != null, whereExpression)
              .ToPageListAsync(intPageIndex, intPageSize, totalCount);
 
-            int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
-            return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, page = intPageIndex, PageSize = intPageSize, data = list };
+            return new PageModel<TEntity>(intPageIndex, totalCount, intPageSize, list);
         }
 
 
@@ -528,8 +524,7 @@ namespace Blog.Core.Repository.Base
              .OrderByIF(!string.IsNullOrEmpty(strOrderByFileds), strOrderByFileds)
              .WhereIF(whereExpression != null, whereExpression)
              .ToPageListAsync(intPageIndex, intPageSize, totalCount);
-            int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
-            return new PageModel<TResult>() { dataCount = totalCount, pageCount = pageCount, page = intPageIndex, PageSize = intPageSize, data = list };
+            return new PageModel<TResult>(intPageIndex, totalCount, intPageSize, list);
         }
 
         /// <summary>
@@ -561,8 +556,7 @@ namespace Blog.Core.Repository.Base
              .OrderByIF(!string.IsNullOrEmpty(strOrderByFileds), strOrderByFileds)
              .WhereIF(whereExpression != null, whereExpression)
              .ToPageListAsync(intPageIndex, intPageSize, totalCount);
-            int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
-            return new PageModel<TResult>() { dataCount = totalCount, pageCount = pageCount, page = intPageIndex, PageSize = intPageSize, data = list };
+            return new PageModel<TResult>(intPageIndex, totalCount, intPageSize, list);
         }
 
         //var exp = Expressionable.Create<ProjectToUser>()

@@ -1,19 +1,21 @@
 ﻿using Autofac;
 using Blog.Core.Common;
 using Blog.Core.Common.LogHelper;
+using Blog.Core.Common.Seed;
 using Blog.Core.Extensions;
 using Blog.Core.Filter;
 using Blog.Core.Hubs;
 using Blog.Core.IServices;
 using Blog.Core.Middlewares;
-using Blog.Core.Model.Seed;
 using Blog.Core.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -43,8 +45,10 @@ namespace Blog.Core
             // 以下code可能与文章中不一样,对代码做了封装,具体查看右侧 Extensions 文件夹.
             services.AddSingleton(new Appsettings(Configuration));
             services.AddSingleton(new LogLock(Env.ContentRootPath));
+            services.AddUiFilesZipSetup(Env);
 
             Permissions.IsUseIds4 = Appsettings.app(new string[] { "Startup", "IdentityServer4", "Enabled" }).ObjToBool();
+            RoutePrefix.Name = Appsettings.app(new string[] { "AppSettings", "SvcName" }).ObjToString();
 
             // 确保从认证中心返回的ClaimType不被更改，不使用Map映射
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -60,13 +64,17 @@ namespace Blog.Core
             services.AddSwaggerSetup();
             services.AddJobSetup();
             services.AddHttpContextSetup();
-            services.AddAppConfigSetup(Env);
+            //services.AddAppConfigSetup(Env);
+            services.AddAppTableConfigSetup(Env);//表格打印配置
             services.AddHttpApi();
             services.AddRedisInitMqSetup();
 
             services.AddRabbitMQSetup();
+            services.AddKafkaSetup(Configuration);
             services.AddEventBusSetup();
 
+            services.AddNacosSetup(Configuration);
+           
             // 授权+认证 (jwt or ids4)
             services.AddAuthorizationSetup();
             if (Permissions.IsUseIds4)
@@ -86,6 +94,10 @@ namespace Blog.Core
 
             services.Configure<KestrelServerOptions>(x => x.AllowSynchronousIO = true)
                     .Configure<IISServerOptions>(x => x.AllowSynchronousIO = true);
+            
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+            services.AddHttpPollySetup();
 
             services.AddControllers(o =>
             {
@@ -101,7 +113,7 @@ namespace Blog.Core
             //{
             //    options.JsonSerializerOptions.PropertyNamingPolicy = null;
             //})
-            //全局配置Json序列化处理
+            //MVC全局配置Json序列化处理
             .AddNewtonsoftJson(options =>
             {
                 //忽略循环引用
@@ -109,12 +121,14 @@ namespace Blog.Core
                 //不使用驼峰样式的key
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                 //设置时间格式
-                //options.SerializerSettings.DateFormatString = "yyyy-MM-dd";
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
                 //忽略Model中为null的属性
                 //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                 //设置本地时间而非UTC时间
                 options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
             });
+
+            services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
 
             _services = services;
             //支持编码大全 例如:支持 System.Text.Encoding.GetEncoding("GB2312")  System.Text.Encoding.GetEncoding("GB18030") 
@@ -125,6 +139,7 @@ namespace Blog.Core
         public void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterModule(new AutofacModuleRegister());
+            builder.RegisterModule<AutofacPropertityModuleReg>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -156,6 +171,8 @@ namespace Blog.Core
                 //app.UseHsts();
             }
 
+            app.UseSession();
+            app.UseSwaggerAuthorized();
             // 封装Swagger展示
             app.UseSwaggerMildd(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream("Blog.Core.Api.index.html"));
 
@@ -166,6 +183,10 @@ namespace Blog.Core
             // 跳转https
             //app.UseHttpsRedirection();
             // 使用静态文件
+            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(defaultFilesOptions);
             app.UseStaticFiles();
             // 使用cookie
             app.UseCookiePolicy();

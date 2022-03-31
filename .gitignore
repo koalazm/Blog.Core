@@ -353,8 +353,6 @@ Blog.Core/Blog.Core*.xml
 Blog.Core.Api/WMBlog.db
 /Blog.Core.Api/wwwroot/files
 /PublishFiles
-/.PublishFiles211122/ref
-/.PublishFiles211122/runtimes
-/.PublishFiles211122/wwwroot/BlogCore.Data.json
-/.PublishFiles211122/wwwroot/files
+
 /.PublishFiles211122
+Blog.Core.Api/wwwroot/ui/

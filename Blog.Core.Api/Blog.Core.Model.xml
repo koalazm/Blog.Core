@@ -96,6 +96,11 @@
             返回信息
             </summary>
         </member>
+        <member name="P:Blog.Core.Model.MessageModel`1.msgDev">
+            <summary>
+            开发者信息
+            </summary>
+        </member>
         <member name="P:Blog.Core.Model.MessageModel`1.response">
             <summary>
             返回数据集合
@@ -139,6 +144,46 @@
             <param name="msg">消息</param>
             <param name="response">数据</param>
             <returns></returns>
+        </member>
+        <member name="P:Blog.Core.Model.MessageModel.status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.MessageModel.success">
+            <summary>
+            操作是否成功
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.MessageModel.msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.MessageModel.response">
+            <summary>
+            返回数据集合
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.AccessTrendLog">
+            <summary>
+            用户访问趋势日志
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.AccessTrendLog.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.AccessTrendLog.Count">
+            <summary>
+            次数
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.AccessTrendLog.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
         </member>
         <member name="P:Blog.Core.Model.Models.Advertisement.ImgUrl">
             <summary>
@@ -836,566 +881,494 @@
             修改时间
             </summary>
         </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyBookmark">
+        <member name="P:Blog.Core.Model.RootEntity.Id">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CompanyID">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            公司ID
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CompanyName">
+            <summary>
+            公司名称
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.BookmarkName">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CompanyIP">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            公司IP
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Description">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CompanyRemark">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            公司备注
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ExtentId">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CompanyAPI">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            api地址
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateBy">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.Enabled">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            是否激活
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateId">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CreateId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateTime">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CreateBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Enabled">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.CreateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            创建时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.OrderSort">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.ModifyId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            修改者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyBy">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.ModifyBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            修改人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyId">
+        <member name="P:Blog.Core.Model.Models.WeChatCompany.ModifyTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            修改时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.IsDeleted">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyFile">
+        <member name="T:Blog.Core.Model.Models.WeChatConfig">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.publicAccount">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            微信公众号唯一标识
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileName">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.publicNick">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            微信公众号名称
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileSize">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.weChatAccount">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            微信账号
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileType">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.weChatNick">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            微信名称
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.GuidName">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.appid">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            应用ID
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.Enabled">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.appsecret">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            应用秘钥
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.IsDeleted">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.token">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            公众号推送token
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyFile.OrderSort">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.interactiveToken">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            验证秘钥(验证消息是否真实)
             </summary>
         </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyMapServer">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.tokenExpiration">
             <summary>
-            
+            微信公众号token过期时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.remark">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            备注
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceName">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.Enabled">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            是否激活
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceAlais">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.CreateId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceType">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.CreateBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceUrl">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.CreateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateBy">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.ModifyId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            修改者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateId">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.ModifyBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            修改人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateTime">
+        <member name="P:Blog.Core.Model.Models.WeChatConfig.ModifyTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            修改时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteBy">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Enabled">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.IsDeleted">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyBy">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.OrderSort">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyProject">
+        <member name="T:Blog.Core.Model.Models.WeChatPushLog">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.id">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            推送ID
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.ProjectName">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogFrom">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            来自谁
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.OrderSort">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogIP">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送IP
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.Enabled">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogCompanyID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送客户
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateId">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogToUserID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送用户
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateBy">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogTemplateID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送模板ID
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateTime">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogContent">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送内容
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyId">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyBy">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogStatus">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送状态(Y/N)
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyTime">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogRemark">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            备注
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.IsDeleted">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogOpenid">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送OpenID
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteBy">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.PushLogPublicAccount">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            推送微信公众号
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteTime">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.CreateId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建者id
             </summary>
         </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyProjectMapServer">
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.CreateBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.ModifyId">
+            <summary>
+            修改者id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.ModifyBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatPushLog.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.WeChatQR">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateBy">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRticket">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键id,ticket
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateId">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRbindCompanyID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            需要绑定的公司
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateTime">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRbindJobID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            需要绑定的员工id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteBy">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRbindJobNick">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            需要绑定的员工昵称
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteTime">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRcrateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Enabled">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRpublicAccount">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            关联的公众号
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRisUsed">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            是否已使用
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.IsDeleted">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRuseTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            使用时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.MapServerId">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.QRuseOpenid">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            关联的微信用户id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyBy">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.CreateId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyId">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.CreateBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyTime">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.CreateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ProjectId">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.ModifyId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            修改者id
             </summary>
         </member>
-        <member name="T:Blog.Core.Model.Models.ZrzyProjectUser">
+        <member name="P:Blog.Core.Model.Models.WeChatQR.ModifyBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatQR.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.WeChatSub">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateBy">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubFromPublicAccount">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            来自哪个公众号
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateId">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.CompanyID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            绑定公司id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateTime">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubJobID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            绑定员工id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteBy">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubUserOpenID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            绑定微信id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteTime">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubUserUnionID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            绑定微信联合id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Enabled">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubUserRegTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            绑定时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.IsDeleted">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubUserRefTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            更新时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyBy">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.SubUserRemark">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            备注
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyId">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.IsUnBind">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            是否已解绑
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyTime">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.LastSubUserOpenID">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            上次绑定微信id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Id">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.CreateId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            创建者id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.UserId">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.CreateBy">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            创建人
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ProjectId">
+        <member name="P:Blog.Core.Model.Models.WeChatSub.CreateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatSub.ModifyId">
+            <summary>
+            修改者id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatSub.ModifyBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatSub.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.WeChatUploadFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileID">
+            <summary>
+            文件ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileContentType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileExtension">
+            <summary>
+            文件拓展名
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFilePosition">
+            <summary>
+            文件位置
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileTime">
+            <summary>
+            文件上传时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.UploadFileRemark">
+            <summary>
+            文件备注
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.CreateId">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.CreateBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.ModifyId">
+            <summary>
+            修改者id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.ModifyBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.WeChatUploadFile.ModifyTime">
+            <summary>
+            修改时间
             </summary>
         </member>
         <member name="P:Blog.Core.Model.RootEntity.Id">
@@ -1534,6 +1507,33 @@
             返回数据
             </summary>
         </member>
+        <member name="T:Blog.Core.Model.PaginationModel">
+            <summary>
+            所需分页参数
+            作者:胡丁文
+            时间:2020-4-3 20:31:26
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.PaginationModel.intPageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.PaginationModel.intPageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.PaginationModel.strOrderByFileds">
+            <summary>
+            排序字段(例如:id desc,time asc)
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.PaginationModel.conditions">
+            <summary>
+            查询条件( 例如:id = 1 and name = 小明)
+            </summary>
+        </member>
         <member name="F:Blog.Core.Model.ResponseEnum.NoPermissions">
             <summary>
             无权限
@@ -1548,264 +1548,6 @@
             <summary>
             找不到指定资源
             </summary>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.DBSeed.SeedAsync(Blog.Core.Model.Seed.MyContext,System.String)">
-            <summary>
-            异步添加种子数据
-            </summary>
-            <param name="myContext"></param>
-            <param name="WebRootPath"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateControllers(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成Controller层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <param name="isMuti"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateModels(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成Model层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <param name="isMuti"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateIRepositorys(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成IRepository层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="isMuti"></param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateIServices(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成 IService 层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="isMuti"></param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateRepository(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成 Repository 层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="isMuti"></param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateServices(SqlSugar.SqlSugarClient,System.String,System.Boolean,System.String[])">
-            <summary>
-            生成 Service 层
-            </summary>
-            <param name="sqlSugarClient">sqlsugar实例</param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="isMuti"></param>
-            <param name="tableNames">数据库表名数组，默认空，生成所有表</param>
-            <returns></returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_Controller_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产Controller层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-            <param name="blnSerializable">是否序列化</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_Model_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产Model层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-            <param name="blnSerializable">是否序列化</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_IRepository_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产IRepository层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_IServices_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产IServices层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_Repository_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产 Repository 层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.Create_Services_ClassFileByDBTalbe(SqlSugar.SqlSugarClient,System.String,System.String,System.String,System.String[],System.String,System.Boolean)">
-            <summary>
-            功能描述:根据数据库表生产 Services 层
-            作　　者:Blog.Core
-            </summary>
-            <param name="sqlSugarClient"></param>
-            <param name="ConnId">数据库链接ID</param>
-            <param name="strPath">实体类存放路径</param>
-            <param name="strNameSpace">命名空间</param>
-            <param name="lstTableNames">生产指定的表</param>
-            <param name="strInterface">实现接口</param>
-            <param name="isMuti"></param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.FrameSeed.CreateFilesByClassStringList(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
-            <summary>
-            根据模板内容批量生成文件
-            </summary>
-            <param name="ls">类文件字符串list</param>
-            <param name="strPath">生成路径</param>
-            <param name="fileNameTp">文件名格式模板</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetMainConnectionDb">
-            <summary>
-            连接字符串 
-            Blog.Core
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Seed.MyContext.ConnectionString">
-            <summary>
-            连接字符串 
-            Blog.Core
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Seed.MyContext.DbType">
-            <summary>
-            数据库类型 
-            Blog.Core 
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.Seed.MyContext.Db">
-            <summary>
-            数据连接对象 
-            Blog.Core 
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.#ctor(SqlSugar.ISqlSugarClient)">
-            <summary>
-            功能描述:构造函数
-            作　　者:Blog.Core
-            </summary>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetEntityDB``1">
-            <summary>
-            功能描述:获取数据库处理对象
-            作　　者:Blog.Core
-            </summary>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetEntityDB``1(SqlSugar.SqlSugarClient)">
-            <summary>
-            功能描述:获取数据库处理对象
-            作　　者:Blog.Core
-            </summary>
-            <param name="db">db</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.CreateTableByEntity``1(System.Boolean,``0[])">
-            <summary>
-            功能描述:根据实体类生成数据库表
-            作　　者:Blog.Core
-            </summary>
-            <param name="blnBackupTable">是否备份表</param>
-            <param name="lstEntitys">指定的实体</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.CreateTableByEntity(System.Boolean,System.Type[])">
-            <summary>
-            功能描述:根据实体类生成数据库表
-            作　　者:Blog.Core
-            </summary>
-            <param name="blnBackupTable">是否备份表</param>
-            <param name="lstEntitys">指定的实体</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.Init(System.String,SqlSugar.DbType)">
-            <summary>
-            功能描述:设置初始化参数
-            作　　者:Blog.Core
-            </summary>
-            <param name="strConnectionString">连接字符串</param>
-            <param name="enmDbType">数据库类型</param>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetConnectionConfig(System.Boolean,System.Boolean)">
-            <summary>
-            功能描述:创建一个链接配置
-            作　　者:Blog.Core
-            </summary>
-            <param name="blnIsAutoCloseConnection">是否自动关闭连接</param>
-            <param name="blnIsShardSameThread">是否夸类事务</param>
-            <returns>ConnectionConfig</returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetCustomDB(SqlSugar.ConnectionConfig)">
-            <summary>
-            功能描述:获取一个自定义的DB
-            作　　者:Blog.Core
-            </summary>
-            <param name="config">config</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetCustomEntityDB``1(SqlSugar.SqlSugarClient)">
-            <summary>
-            功能描述:获取一个自定义的数据库处理对象
-            作　　者:Blog.Core
-            </summary>
-            <param name="sugarClient">sugarClient</param>
-            <returns>返回值</returns>
-        </member>
-        <member name="M:Blog.Core.Model.Seed.MyContext.GetCustomEntityDB``1(SqlSugar.ConnectionConfig)">
-            <summary>
-            功能描述:获取一个自定义的数据库处理对象
-            作　　者:Blog.Core
-            </summary>
-            <param name="config">config</param>
-            <returns>返回值</returns>
         </member>
         <member name="T:Blog.Core.Model.TableModel`1">
             <summary>
@@ -2547,48 +2289,6 @@
         <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileUrl">
             <summary>
             
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileSize">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileType">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.GuidName">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.IsDeleted">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>
-        </member>
-        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.OrderSort">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
             </summary>
         </member>
     </members>
