@@ -43,7 +43,7 @@ namespace Blog.Core.Extensions
                     c.OrderActionsBy(o => o.RelativePath);
                 });
 
-
+                c.UseInlineDefinitionsForEnums();
                 try
                 {
                     //这个就是刚刚配置的xml文件名
@@ -104,6 +104,7 @@ namespace Blog.Core.Extensions
 
 
             });
+            services.AddSwaggerGenNewtonsoftSupport();
         }
     }
 

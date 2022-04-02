@@ -59,6 +59,7 @@ namespace Blog.Core.Controllers
         /// <param name="passwordLibServices"></param>
         /// <param name="blogApi"></param>
         /// <param name="doubanApi"></param>
+        /// <param name="httpPollyHelper"></param>
         public ValuesController(IBlogArticleServices blogArticleServices
             , IMapper mapper
             , IAdvertisementServices advertisementServices
@@ -413,6 +414,10 @@ namespace Blog.Core.Controllers
             return await _httpPollyHelper.GetAsync(HttpEnum.LocalHost, "/api/ElasticDemo/GetDetailInfo?esid=3130&esindex=chinacodex");
         } 
         #endregion
+
+        [HttpPost]
+        [AllowAnonymous]
+        public string TestEnum(EnumDemoDto dto)=>dto.Type.ToString();
     }
     public class ClaimDto
     {
