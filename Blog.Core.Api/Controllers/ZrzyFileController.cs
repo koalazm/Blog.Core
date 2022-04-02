@@ -99,7 +99,7 @@ namespace Blog.Core.Api.Controllers
             {
                 dataCount = zrzyFiles.dataCount,
                 page = zrzyFiles.page,
-                pageCount = zrzyFiles.pageCount,
+                //pageCount = zrzyFiles.pageCount,
                 PageSize = zrzyFiles.PageSize
             };
             zrzyFileViewModels.data = new System.Collections.Generic.List<ZrzyFileViewModel>();

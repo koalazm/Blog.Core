@@ -881,7 +881,7 @@
             修改时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.RootEntity.Id">
+        <member name="T:Blog.Core.Model.Models.WeChatCompany">
             <summary>
             
             </summary>
@@ -1369,6 +1369,664 @@
         <member name="P:Blog.Core.Model.Models.WeChatUploadFile.ModifyTime">
             <summary>
             修改时间
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyBookmark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.BookmarkName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Description">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ExtentId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyBookmark.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileSize">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.FileType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.GuidName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyFile.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyMapServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceAlais">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ServiceUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyMapServer.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ProjectName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProject.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProjectFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.FileId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectFile.ProjectId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProjectMapServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.MapServerId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectMapServer.ProjectId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.Models.ZrzyProjectUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.DeleteTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Enabled">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyBy">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.UserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.Models.ZrzyProjectUser.ProjectId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
             </summary>
         </member>
         <member name="P:Blog.Core.Model.RootEntity.Id">
@@ -2267,6 +2925,682 @@
             
             </summary>
         </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatApiDto">
+            <summary>
+            微信接口消息DTO
+            作者:胡丁文
+            时间:2020-03-25
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.id">
+            <summary>
+            微信公众号ID(数据库查询)
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.errcode">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.errmsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.access_token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.expires_in">
+            <summary>
+            过期时间(秒)
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.total">
+            <summary>
+            用户关注数
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.count">
+            <summary>
+            获取用户数量
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.data">
+            <summary>
+            获取用户OpenIDs
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.next_openid">
+            <summary>
+            下一个关注用户
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.template_list">
+            <summary>
+            微信消息模板列表
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.menu">
+            <summary>
+            微信菜单
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.ticket">
+            <summary>
+            二维码票据
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.expire_seconds">
+            <summary>
+            二维码过期时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.url">
+            <summary>
+            二维码地址
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.subscribe">
+            <summary>
+            关注状态
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.openid">
+            <summary>
+            用户微信ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.city">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.country">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatApiDto.headimgurl">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatCardMsgDataDto">
+            <summary>
+            微信推送消息Dto
+            作者:胡丁文
+            时间:2020-4-8 09:16:16
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDataDto.info">
+            <summary>
+            推送关键信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDataDto.cardMsg">
+            <summary>
+            推送卡片消息Dto
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatCardMsgDataOpenIDDto">
+            <summary>
+            微信推送消息Dto
+            作者:胡丁文
+            时间:2020-11-23 16:29:05
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDataOpenIDDto.info">
+            <summary>
+            推送关键信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDataOpenIDDto.cardMsg">
+            <summary>
+            推送卡片消息Dto
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto">
+            <summary>
+            消息模板dto(如何填写数据,请参考微信模板即可)
+            作者:胡丁文
+            时间:2020-4-1 09:32:16
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.template_id">
+            <summary>
+            消息模板
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.first">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.colorFirst">
+            <summary>
+            标题颜色(颜色代码都必须为#开头的16进制代码)
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.keyword1">
+            <summary>
+            内容1
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.color1">
+            <summary>
+            内容1颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.keyword2">
+            <summary>
+            内容2
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.color2">
+            <summary>
+            内容2颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.keyword3">
+            <summary>
+            内容3
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.color3">
+            <summary>
+            内容3颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.keyword4">
+            <summary>
+            内容4
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.color4">
+            <summary>
+            内容4颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.keyword5">
+            <summary>
+            内容5
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.color5">
+            <summary>
+            内容5颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.remark">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.colorRemark">
+            <summary>
+            备注信息颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatCardMsgDetailDto.url">
+            <summary>
+            跳转连接
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatMenuButtonDto">
+            <summary>
+            获取微信菜单DTO,用于存放具体菜单内容
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatMenuDto">
+            <summary>
+            获取微信菜单DTO
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatMenuDto.button">
+            <summary>
+            按钮列表(最多三个)
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatOpenIDsDto">
+            <summary>
+            微信OpenID列表Dto
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatPushCardMsgDetailDto">
+            <summary>
+            推送详细数据
+            作者:胡丁文
+            时间:2020-4-8 09:16:16
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatPushCardMsgDto">
+            <summary>
+            推送给微信所需Dto
+            作者:胡丁文
+            时间:2020-4-8 09:16:16
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgDto.touser">
+            <summary>
+            推送微信用户ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgDto.template_id">
+            <summary>
+            推送的模板ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgDto.url">
+            <summary>
+            推送URL地址
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgDto.data">
+            <summary>
+            推送的数据
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatPushCardMsgValueColorDto">
+            <summary>
+            微信keyword所需Dto
+            作者:胡丁文
+            时间:2020-4-8 09:18:08
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgValueColorDto.value">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushCardMsgValueColorDto.color">
+            <summary>
+            文字颜色
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushLinkMsgContentDto.title">
+            <summary>
+            图文链接标题
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushLinkMsgContentDto.description">
+            <summary>
+            图文描述
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushLinkMsgContentDto.viewUrl">
+            <summary>
+            访问URL
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushLinkMsgContentDto.pictureUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushPictureContentDto.pictureMediaID">
+            <summary>
+            图片mediaID
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatPushTestDto">
+            <summary>
+            推送模拟消息Dto
+            作者:胡丁文
+            时间:2020-4-24 14:52:44
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectWeChat">
+            <summary>
+            当前选中的微信公众号
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectOperate">
+            <summary>
+            当前选中的操作集合
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectBindOrSub">
+            <summary>
+            当前选中的绑定还是订阅
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectCompany">
+            <summary>
+            当前选中的微信客户
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectMsgType">
+            <summary>
+            当前选中的消息类型
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.selectUser">
+            <summary>
+            当前选中要发送的用户
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.textContent">
+            <summary>
+            文本消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.pictureContent">
+            <summary>
+            图片消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.voiceContent">
+            <summary>
+            语音消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.videoContent">
+            <summary>
+            视频消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTestDto.linkMsgContent">
+            <summary>
+            链接消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushTextContentDto.text">
+            <summary>
+            文字消息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushVideoContentDto.title">
+            <summary>
+            视频标题
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushVideoContentDto.pictureMediaID">
+            <summary>
+            视频封面mediaID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushVideoContentDto.videoMediaID">
+            <summary>
+            视频mediaID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatPushVoiceContentDto.voiceMediaID">
+            <summary>
+            语音mediaID
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatQRActionDto">
+            <summary>
+            微信二维码预装发送信息dto
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatQRActionInfoDto">
+            <summary>
+            微信二维码预装具体消息
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatQRDto">
+            <summary>
+            微信二维码预装信息DTO
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatResponseUserInfo">
+            <summary>
+            返回给调用者的Dto
+            作者:胡丁文
+            时间:2020-4-8 09:52:06
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatResponseUserInfo.id">
+            <summary>
+            微信公众号ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatResponseUserInfo.companyCode">
+            <summary>
+            公司代码
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatResponseUserInfo.usersData">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatTemplateList">
+            <summary>
+            微信消息模板Dto
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatUserInfo">
+            <summary>
+            微信推送所需信息(公司版本)
+            作者:胡丁文
+            时间:2020-4-8 09:04:36
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfo.id">
+            <summary>
+            微信公众号ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfo.companyCode">
+            <summary>
+            公司代码
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfo.userID">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfo.userNick">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatUserInfoOpenID">
+            <summary>
+            微信推送所需信息(OpenID版本)
+            作者:胡丁文
+            时间:2020-11-23 16:27:29
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfoOpenID.id">
+            <summary>
+            微信公众号ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatUserInfoOpenID.userID">
+            <summary>
+            微信OpenID
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatValidDto">
+            <summary>
+            微信验证Dto
+            作者:胡丁文
+            时间:2020-4-1 21:34:07
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatValidDto.publicAccount">
+            <summary>
+            微信公众号唯一标识
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatValidDto.echoStr">
+            <summary>
+            验证成功后返回给微信的字符串
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatValidDto.signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatValidDto.timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatValidDto.nonce">
+            <summary>
+            随机数
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Model.ViewModels.WeChatXMLDto">
+            <summary>
+            微信XmlDto
+            作者:胡丁文
+            时间:2020-4-3 20:31:26
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.publicAccount">
+            <summary>
+            微信公众号唯一表示
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.ToUserName">
+            <summary>
+            微信开发者
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.FromUserName">
+            <summary>
+            来自谁
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.MsgType">
+            <summary>
+            消息类型
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Content">
+            <summary>
+            文字内容
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.MsgId">
+            <summary>
+            消息ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Event">
+            <summary>
+            消息事件
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.EventKey">
+            <summary>
+            事件key值
+            </summary> 
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.PicUrl">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.MediaId">
+            <summary>
+            多媒体ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Format">
+            <summary>
+            格式
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Recognition">
+            <summary>
+            语音失败
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.ThumbMediaId">
+            <summary>
+            缩略媒体ID
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Location_X">
+            <summary>
+            地理位置维度
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Location_Y">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Scale">
+            <summary>
+            地图缩放大小
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Label">
+            <summary>
+            地理位置信息
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Description">
+            <summary>
+            消息描述
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Url">
+            <summary>
+            消息链接
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Ticket">
+            <summary>
+            二维码的ticket，可用来换取二维码图片
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Latitude">
+            <summary>
+            地理位置纬度
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Longitude">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.WeChatXMLDto.Precision">
+            <summary>
+            地理位置精度
+            </summary>
+        </member>
         <member name="T:Blog.Core.Model.ViewModels.ZrzyFileViewModel">
             <summary>
             
@@ -2289,6 +3623,48 @@
         <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileUrl">
             <summary>
             
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileSize">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.FileType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.GuidName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.IsDeleted">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Model.ViewModels.ZrzyFileViewModel.OrderSort">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
             </summary>
         </member>
     </members>

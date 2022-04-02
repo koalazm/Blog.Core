@@ -23,18 +23,33 @@ namespace Blog.Core.Api.Controllers
         /// </summary>
         private readonly IZrzyProjectServices _zrzyProjectServices;
         private readonly IZrzyProjectUserServices _zrzyProjectUserServices;
+        private readonly IZrzyProjectFileServices _zrzyProjectFileServices;
+        private readonly IZrzyProjectMapServerServices _zrzyProjectMapServerServices;
+        private readonly IZrzyFileServices _zrzyFileServices;
+        private readonly IZrzyMapServerServices _zrzyMapServerServices;
+        private readonly ISysUserInfoServices _sysUserInfoServices;
         private readonly IUser _user;
         private readonly PermissionRequirement _requirement;
 
         public ZrzyProjectController(IZrzyProjectServices zrzyProjectServices,
             IZrzyProjectUserServices zrzyProjectUserServices,
-            IUser user, 
+            IZrzyProjectFileServices zrzyProjectFileServices,
+            IZrzyProjectMapServerServices zrzyProjectMapServerServices,
+            IZrzyFileServices zrzyFileServices,
+            IZrzyMapServerServices zrzyMapServerServices,
+            ISysUserInfoServices sysUserInfoServices,
+            IUser user,
             PermissionRequirement requirement)
         {
             _zrzyProjectServices = zrzyProjectServices;
             _zrzyProjectUserServices = zrzyProjectUserServices;
+            _zrzyProjectFileServices = zrzyProjectFileServices;
+            _zrzyProjectMapServerServices = zrzyProjectMapServerServices;
+            _zrzyFileServices = zrzyFileServices;
+            _zrzyMapServerServices = zrzyMapServerServices;
+            _sysUserInfoServices = sysUserInfoServices;
             _user = user;
-            _requirement= requirement ;
+            _requirement = requirement;
         }
 
         [HttpGet]
@@ -154,7 +169,7 @@ namespace Blog.Core.Api.Controllers
 
 
         /// <summary>
-        /// 通过项目获取用户
+        /// 通过项目获取用户编号
         /// </summary>
         /// <param name="pid"></param>
         /// <returns></returns>
@@ -179,8 +194,37 @@ namespace Blog.Core.Api.Controllers
             return data;
         }
 
+
         /// <summary>
-        /// 保存菜单权限分配
+        /// 通过项目获取用户
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<sysUserInfo>>> GetUsersByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<sysUserInfo>>();
+
+            var pus = await _zrzyProjectUserServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var userIds = (from item in pus
+                           select item.UserId.ObjToInt()).ToList();
+
+            object[] param = Array.ConvertAll<int, object>(userIds.ToArray(), new Converter<int, object>(Int2Obj));
+            var result = await _sysUserInfoServices.QueryByIDs(param);
+
+            data.success = true;
+            if (data.success)
+            {
+                data.response = result;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// 保存项目用户分配
         /// </summary>
         /// <param name="assignView"></param>
         /// <returns></returns>
@@ -231,11 +275,232 @@ namespace Blog.Core.Api.Controllers
             return data;
         }
 
+
+        /// <summary>
+        /// 通过项目获取文件编号
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<int>>> GetFileIdsByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<int>>();
+
+            var pus = await _zrzyProjectFileServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var userIds = (from item in pus
+                           select item.FileId.ObjToInt()).ToList();
+            data.success = true;
+            if (data.success)
+            {
+                data.response = userIds;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// 通过项目获取文件列表
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<ZrzyFile>>> GetFilesByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<ZrzyFile>>();
+
+            var pus = await _zrzyProjectFileServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var fileIds = (from item in pus
+                           select item.FileId.ObjToInt()).ToList();
+
+            object[] param = Array.ConvertAll<int, object>(fileIds.ToArray(), new Converter<int, object>(Int2Obj));
+            var result =  await _zrzyFileServices.QueryByIDs(param);
+
+            data.success = true;
+            if (data.success)
+            {
+                data.response = result;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        private static object Int2Obj(int param)
+        {
+            return (object)param;
+        }
+        /// <summary>
+        /// 保存项目文件分配
+        /// </summary>
+        /// <param name="assignView"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<MessageModel<string>> ProjectFilesAssign([FromBody] ProjectFilesView assignView)
+        {
+            var data = new MessageModel<string>();
+
+
+            if (assignView.pid > 0)
+            {
+                data.success = true;
+
+                var projectFiles = await _zrzyProjectFileServices.Query(d => d.ProjectId == assignView.pid);
+                //TODO
+                var remove = projectFiles.Where(d => !assignView.fids.Contains(d.FileId.ObjToInt())).Select(c => (object)c.Id);
+                data.success &= remove.Any() ? await _zrzyProjectFileServices.DeleteByIds(remove.ToArray()) : true;
+
+                foreach (var item in assignView.fids)
+                {
+                    var rmpitem = projectFiles.Where(d => d.FileId == item);
+                    if (!rmpitem.Any())
+                    {
+                        ZrzyProjectFile projectFile = new ZrzyProjectFile();
+                        projectFile.IsDeleted = false;
+                        projectFile.ProjectId = assignView.pid;
+                        projectFile.FileId = item;
+                        projectFile.Enabled = true;
+                        projectFile.CreateId = _user.ID;
+                        projectFile.CreateBy = _user.Name;
+                        projectFile.CreateTime = DateTime.Now;
+
+                        data.success &= (await _zrzyProjectFileServices.Add(projectFile)) > 0;
+
+                    }
+                }
+
+                if (data.success)
+                {
+                    _requirement.Permissions.Clear();
+                    data.response = "";
+                    data.msg = "保存成功";
+                }
+
+            }
+            return data;
+        }
+
+
+        /// <summary>
+        /// 通过项目获取地图服务编号
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<int>>> GetMapServerIdsByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<int>>();
+
+            var pus = await _zrzyProjectMapServerServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var userIds = (from item in pus
+                           select item.MapServerId.ObjToInt()).ToList();
+
+
+            data.success = true;
+            if (data.success)
+            {
+                data.response = userIds;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// 通过项目获取地图服务列表
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<MessageModel<List<ZrzyMapServer>>> GetMapServersByProjectId(int pid = 0)
+        {
+            var data = new MessageModel<List<ZrzyMapServer>>();
+
+            var pus = await _zrzyProjectMapServerServices.Query(d => d.IsDeleted == false && d.ProjectId == pid);
+            var ids = (from item in pus
+                           select item.MapServerId.ObjToInt()).ToList();
+            object[] param = Array.ConvertAll<int, object>(ids.ToArray(), new Converter<int, object>(Int2Obj));
+            var result = await _zrzyMapServerServices.QueryByIDs(param);
+
+            data.success = true;
+            if (data.success)
+            {
+                data.response = result;
+                data.msg = "获取成功";
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// 保存项目地图服务分配
+        /// </summary>
+        /// <param name="assignView"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<MessageModel<string>> ProjectMapServersAssign([FromBody] ProjectMapserversView assignView)
+        {
+            var data = new MessageModel<string>();
+
+
+            if (assignView.pid > 0)
+            {
+                data.success = true;
+
+                var projectMapServers = await _zrzyProjectMapServerServices.Query(d => d.ProjectId == assignView.pid);
+                //TODO
+                var remove = projectMapServers.Where(d => !assignView.mids.Contains(d.MapServerId.ObjToInt())).Select(c => (object)c.Id);
+                data.success &= remove.Any() ? await _zrzyProjectFileServices.DeleteByIds(remove.ToArray()) : true;
+
+                foreach (var item in assignView.mids)
+                {
+                    var rmpitem = projectMapServers.Where(d => d.MapServerId == item);
+                    if (!rmpitem.Any())
+                    {
+                        ZrzyProjectMapServer projectFile = new ZrzyProjectMapServer();
+                        projectFile.IsDeleted = false;
+                        projectFile.ProjectId = assignView.pid;
+                        projectFile.MapServerId = item;
+                        projectFile.Enabled = true;
+                        projectFile.CreateId = _user.ID;
+                        projectFile.CreateBy = _user.Name;
+                        projectFile.CreateTime = DateTime.Now;
+
+                        data.success &= (await _zrzyProjectMapServerServices.Add(projectFile)) > 0;
+
+                    }
+                }
+
+                if (data.success)
+                {
+                    _requirement.Permissions.Clear();
+                    data.response = "";
+                    data.msg = "保存成功";
+                }
+
+            }
+            return data;
+        }
     }
 
     public class ProjectUsersView
     {
         public List<int> uids { get; set; }
+        public int pid { get; set; }
+    }
+
+    public class ProjectFilesView
+    {
+        public List<int> fids { get; set; }
+        public int pid { get; set; }
+    }
+    public class ProjectMapserversView
+    {
+        public List<int> mids { get; set; }
         public int pid { get; set; }
     }
 }
